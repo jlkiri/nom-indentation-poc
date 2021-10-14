@@ -54,7 +54,6 @@ fn indentation<'a>(input: &'a str, counter: &mut IndentationCounter) -> Result<'
             indent_tokens.push(Token::Indent);
         }
     }
-    indent_tokens.reverse();
     counter.current = indent_level;
     Ok((rest, indent_tokens))
 }
